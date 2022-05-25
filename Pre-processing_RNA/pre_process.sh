@@ -208,8 +208,8 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:$read_length 2> ${pre_name}_Trimm
 	featureCounts \
                 -T $threads \
                 -p \
-                -t exon \
-                -g gene_id \
+                -t transcript \
+                -g transcript_id \
                 -a $gtf \
                 -o ${pre_name}_featureCounts.txt \
                 ../3.align/${pre_name}_nsorted.bam \
